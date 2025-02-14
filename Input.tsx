@@ -37,12 +37,13 @@ export const Input: FC<InputProps> = (props) => {
         )}
         <input
           {...props}
+          placeholder={placeholder}
           name={name}
           value={value as string}
           onChange={(e) => {
             setValue(e.target.value);
           }}
-          className="bg-[#1a212d] border-2 border-[#161922] rounded-md p-2 text-white font-medium text-lg focus:outline-none placeholder:text-[#343a44]"
+          className={`bg-[#1a212d] border-2 border-[#161922] rounded-md p-2 text-white font-medium text-lg focus:outline-none placeholder:text-[#343a44] ${VARIANT_STYLE[variant]}`}
         />
       </div>
     );
@@ -56,13 +57,14 @@ export const Input: FC<InputProps> = (props) => {
         )}
         <textarea
           {...props}
+          placeholder={placeholder}
           name={name}
           value={value as string}
           rows={3}
           onChange={(e) => {
             setValue(e.target.value);
           }}
-          className="bg-[#1a212d] border-2 border-[#161922] rounded-md p-2 text-white font-medium text-lg focus:outline-none placeholder:text-[#343a44]"
+          className={`bg-[#1a212d] border-2 border-[#161922] rounded-md p-2 text-white font-medium text-lg focus:outline-none placeholder:text-[#343a44] ${VARIANT_STYLE[variant]}`}
         />
       </div>
     );
